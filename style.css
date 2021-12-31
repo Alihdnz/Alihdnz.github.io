@@ -1,0 +1,111 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Anmation */
+
+@keyframes updown {
+    0% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* ---------*/
+
+
+
+body {
+    background: linear-gradient(180deg, #06001F 0%, #001D48 83.33%, #07011F 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.name {
+    font-weight: bold;
+font-size: 48px;
+line-height: 83px;
+
+color: #FFFFFF;
+}
+
+.ocupation {
+    font-weight: normal;
+font-size: 25px;
+line-height: 42px;
+
+color: #8F00FF;
+}
+
+.description {
+    font-weight: normal;
+font-size: 24px;
+line-height: 31px;
+text-align: center;
+width: 927px;
+color: #818181;
+
+}
+
+
+.avatar img{
+    margin-top: 60px; 
+    width: 328px;
+height: 328px;
+}
+
+.arrow-down{
+    display: flex;
+    margin-top: 50px;
+}
+
+.icon-arrow-down{
+    width:35px;
+    height: 35px;
+    background: url(./assets/Arrow.png) 50% no-repeat;
+    background-size: contain;
+    
+    animation: updown 0.9s alternate infinite ease-in-out;
+}
+
+
+/* Media Querys */
+
+
+@media screen and (max-width: 376px){
+    .description {
+        width: 320px;
+        font-size: 20px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .ocupation{
+        font-size: 20px;
+    }
+
+    .avatar img {
+        width: 294px;
+        height: 294px;
+    }
+}
+
