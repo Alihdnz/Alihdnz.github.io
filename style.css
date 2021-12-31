@@ -89,7 +89,7 @@ height: 328px;
 /* Media Querys */
 
 
-@media screen and (max-width: 376px){
+@media screen and (max-width: 500px){
     .description {
         width: 320px;
         font-size: 20px;
@@ -104,8 +104,18 @@ height: 328px;
     }
 
     .avatar img {
-        width: 294px;
-        height: 294px;
+        width: 250px;
+        height: 250px;
     }
 }
 
+@media screen and (max-height: 670px){
+    
+    .arrow-down{
+        margin-top:30px;
+    }
+    .avatar img {
+        width: 200px;
+        height: 200px;
+    }
+}
