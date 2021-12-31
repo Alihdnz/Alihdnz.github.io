@@ -5,6 +5,8 @@
     font-family: 'IBM Plex Mono', monospace;
 }
 
+
+
 /* Anmation */
 
 @keyframes updown {
@@ -16,6 +18,17 @@
         transform: translateY(-50%);
     }
 }
+
+
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-1 {
+    opacity: 1;
+}
+
 
 /* ---------*/
 
@@ -31,10 +44,56 @@ body {
 }
 
 .container-header {
+    
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: .3s ease-in;
+}
+.container-header-fixed {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    transition: .3s ease-in;
+
+}
+
+.container-info-fixed{
+    margin-left: 10vh;
+}
+.container-info-fixed .name {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.container-info-fixed .ocupation{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 42px;
+    color: #8F00FF;
+}
+
+.container-header-fixed .avatar{
+    margin-left: 1000px;
+}
+
+
+
+.container-header-fixed .avatar img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.container-info {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -85,6 +144,37 @@ height: 328px;
     animation: updown 0.9s alternate infinite ease-in-out;
 }
 
+.tech_skils {
+    margin-top: 50px;
+}
+
+.tech_skils h2 {
+    font-weight: bold;
+font-size: 35px;
+line-height: 62px;
+
+color: #FFFFFF;
+}
+
+
+.tech_skils .content_tech h3 {
+    font-weight: 600;
+font-size: 27px;
+line-height: 47px;
+/* identical to box height */
+
+
+color: #8F00FF
+}
+
+.tech_skils .content_tech p {
+    font-weight: normal;
+font-size: 15px;
+line-height: 31px;
+
+color: #FFFFFF;
+}
+
 
 /* Media Querys */
 
@@ -119,3 +209,53 @@ height: 328px;
         height: 200px;
     }
 }
+
+
+
+@media screen and (max-width: 1220px) {
+    .container-header-fixed .avatar {
+        margin-left: 805px;
+    }    
+   
+    }
+   
+   
+   @media screen and (max-width: 763px) 
+   {
+    .container-header-fixed .avatar {
+        margin-left: 390px;
+    }    
+   
+   
+   }
+   
+   @media screen and (max-width: 501px) 
+   {
+    .container-header-fixed .avatar {
+        margin-left: 30px;
+    }    
+
+    
+    .container-info-fixed {
+        margin-left: 3vh;
+     }
+   }
+   
+   @media screen and (max-width: 376px) 
+   {
+    .container-header-fixed .avatar {
+        margin-left: 30px;
+   
+    }   
+   
+    .container-header-fixed .avatar img {
+        width: 80px !important;
+        height: 80px !important;
+   
+    }
+    
+    .container-info-fixed {
+       margin-left: 3vh;
+    }
+   }
+   
